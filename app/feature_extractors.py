@@ -259,7 +259,7 @@ class Handcrafted:
 
         print(f"Vector Hu Moments (Normalizados): {len(self.vector_hu)}")
 
-    def extraccion_wavelet(self, wavelet='db1', niveles=6):
+    def extraccion_wavelet(self, wavelet='db1', niveles=3):
         """
         Extrae características de frecuencia utilizando la Transformada Wavelet Discreta.
 
@@ -283,6 +283,9 @@ class Handcrafted:
         self.vector_wavelet = np.array(wavelet_features, dtype=np.float32)
 
         print(f"Vector Wavelet: {len(self.vector_wavelet)}")
+        
+        
+    
 
     ################### Concatenación de Características #####################
 
@@ -303,7 +306,7 @@ class Handcrafted:
             self.vector_fft,
             self.vector_hu, 
             self.vector_wavelet
-        ))
+            ))
         print('largo_vector_concatenado', len(concatenated_vector))
 
         return concatenated_vector

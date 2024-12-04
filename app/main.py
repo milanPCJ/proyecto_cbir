@@ -95,7 +95,8 @@ def retrieve_image(img_path, feature_extractor, vgg_model, scaler_handcrafted, i
         extractor.extraccion_sobel()
         extractor.extraccion_fft()
         extractor.extraccion_hu_moments()
-        #extractor.extraccion_wavelet()
+        extractor.extraccion_wavelet()
+ 
         vector = extractor.concatenar_caracteristicas()
         #st.write("Características Handcrafted extraídas.")  # Depuración
 
